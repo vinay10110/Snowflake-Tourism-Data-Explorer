@@ -84,6 +84,3 @@ If your table or column names differ, adapt the code where the fields are refere
 
 ## Acknowledgements
 This project was developed during the Snowflake hackathon "Your Story".
-
-## License
-Add your preferred license (e.g., MIT) in a `LICENSE` file.
