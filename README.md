@@ -22,6 +22,14 @@ An interactive Streamlit dashboard to explore tourism data stored in Snowflake. 
 - `.env.local` — Example environment file (copy to `.env` and fill)
 - `requirements.txt` — Python dependencies
 
+## Tech Stack
+- Language: Python 3.8+
+- App framework: Streamlit
+- Data access: snowflake-connector-python
+- Data manipulation: pandas
+- Visualization: Plotly
+- Config/Secrets: python-dotenv
+
 ## Quick Start
 1) Python 3.8+ recommended
 
@@ -72,15 +80,6 @@ The app expects the following tables (in `TOURISM.PUBLIC` by default):
   - Columns (used by the app): `NAME`, `CITY`, `TYPE`, `GOOGLE_REVIEW_RATING`, `NUMBER_OF_GOOGLE_REVIEW_IN_LAKHS`, `ENTRANCE_FEE_IN_INR`, `TIME_NEEDED_TO_VISIT_IN_HRS`
 
 If your table or column names differ, adapt the code where the fields are referenced.
-
-## Security
-- `.env` is git-ignored (see `.gitignore`); never commit credentials.
-- Use a least-privilege Snowflake role and consider network policies and MFA as appropriate.
-
-## Troubleshooting
-- Missing env vars: the app will display a Streamlit error and `config.py` will raise a descriptive exception.
-- Connection issues: verify account/role/warehouse and that your IP can access Snowflake.
-- Empty charts: ensure tables listed above exist with expected columns and numeric types.
 
 ## Acknowledgements
 This project was developed during the Snowflake hackathon "Your Story".
